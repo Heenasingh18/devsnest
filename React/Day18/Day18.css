@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Great+Vibes&display=swap');
+div.chess{
+    width: 280px;
+    height:305px;
+    background-color: black;
+    margin: auto;
+    margin-left: 600px;
+    margin-top: 200px;
+    transition: transform 0.3s ease-in;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px 4px black ;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 15px solid black;
+}
+td{
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+.white{
+    background-color: white;
+}
+
+

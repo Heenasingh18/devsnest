@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.Day21_title1{
+    margin-left: 36vw;
+    display: inline-block;
+    font-size: 30px;
+    font-family: "lobster",cursive;
+    font-weight: bold;
+    color:rgb(44, 15, 148);
+}
+
+.input_1
+{
+    font-family: cursive;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.Day21_title2{
+    display: inline-block;
+    margin-left: 5vw;
+    font-size: 30px;
+    font-family: "lobster",cursive;
+    font-weight: bold;
+    color: rgb(44, 15, 148);
+}
+
+
+#title{
+    height: 30px;
+    width: 250px;
+    border:2px solid black;
+    border-radius: 6px;
+    margin-left: -40px;
+    color:rgb(44, 15, 148);
+    font-weight: 500;
+}
+
+#number
+{
+    height: 30px;
+    width: 250px;
+    border:2px solid black;
+    border-radius: 6px;
+    margin-left: -30px;
+    color:rgb(44, 15, 148);
+    font-weight: 500;
+}
+
+.Day21_heading{
+    text-align: center;
+    margin-bottom: 6vh;
+    text-shadow: 0px 0px 1px black;
+    color:black;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.Start_adding  {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 2vw;
+    font-size: 30px;
+    
+
+}
+
+.calorie-text
+{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Pacifico', cursive;
+    margin-left: 15px;
+    font-size: 30px;
+    color:rgb(44, 15, 148);
+    font-weight: 100px;
+}
+
+.rating_val
+{
+    text-align: center;
+    margin-top: 17px;
+    font-family: 'Pacifico', cursive;
+    margin-left: -15px;
+    background-color: rgb(236, 226, 226);
+    font-size: 25px;
+    color:rgb(44, 15, 148);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: 100px;
+    
+}
+.Book_name
+{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'lobster',cursive;
+    margin-left: 15px;
+    font-size: 30px;
+    color: white;
+    font-weight: 100px;
+}
+
+.border{
+    border: 2px solid black;
+    width: 40vw;
+    margin-left: 450px;
+    background-color: rgb(31, 101, 122);
+    border-radius: 10px;
+    color: papayawhip;
+    margin-top: 4vh;
+    
+}
+
+
+
+
+
+.add
+{
+    margin: auto;
+    margin-left: 500px;
+}
+.add_item
+{
+    height: 30px;
+    outline: black;
+    width: 200px;
+    text-align: center;
+    
+}
+.add_calories
+{
+    height:30px;
+    margin-left: 30px;
+    outline: black;
+    width: 200px;
+    text-align: center;
+}
+.add_btn
+{
+    height:36px;
+    margin-left: 550px;
+    outline: black;
+    width: 350px;
+    text-align: center;
+    margin-top: 30px;
+    background-color: blue;
+    color: white;
+}
+h1.heading_add
+{
+    margin-left: 100px;
+}

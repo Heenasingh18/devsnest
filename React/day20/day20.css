@@ -1,0 +1,32 @@
+div.main20{
+    margin:auto;
+    padding:5px;
+    background-color: whitesmoke;
+    width:600px;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align:justify;
+    margin-top: 55px ;
+    padding: 20px;
+}
+.container20
+{
+    height: 130px;
+    width: 400px;
+    display: inline-block;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 6px rgb(198, 240, 119);
+    margin-left: 110px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.container20 button{
+    margin-top: 5px;
+    margin-left: 340px;
+}
+.container20 h1{
+    display: inline;
+}

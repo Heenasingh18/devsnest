@@ -1,0 +1,34 @@
+.Day19 {
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .counter{
+    display:flex;
+    flex-direction: row;
+    height:100px;
+    width:400px;
+    margin-top: 250px;
+    margin-left: 500px;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 6px rgb(198, 240, 119);
+    padding: 10px;
+  }
+  .cnt{
+    height:100px;
+    width:100px;
+    border:3px solid rgba(0, 0, 0, 0.233);
+    background-color: rgba(58, 57, 57, 0.192);
+    cursor:pointer;
+}
+.cnt h1{
+    height:60%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

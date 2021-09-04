@@ -1,0 +1,114 @@
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379> set name heena
+OK
+127.0.0.1:6379> get name
+"heena"
+127.0.0.1:6379> set age 20
+OK
+127.0.0.1:6379> get age
+"20"
+127.0.0.1:6379> del age
+(integer) 1
+127.0.0.1:6379> exist age
+(error) ERR unknown command 'exist'
+127.0.0.1:6379> exists age
+(integer) 0
+127.0.0.1:6379> exists name
+(integer) 1
+127.0.0.1:6379> keys *
+1) "name"
+127.0.0.1:6379> set age 20
+OK
+127.0.0.1:6379> keys *
+1) "name"
+2) "age"
+127.0.0.1:6379> flushall
+OK
+127.0.0.1:6379> keys *
+(empty list or set)
+127.0.0.1:6379> ttl name
+(integer) -2
+127.0.0.1:6379> set name heena
+OK
+127.0.0.1:6379> ttl name
+(integer) -1
+127.0.0.1:6379> expire name 10
+(integer) 1
+127.0.0.1:6379> ttl name
+(integer) 7
+127.0.0.1:6379> ttl name
+(integer) 3
+127.0.0.1:6379> ttl name
+(integer) -2
+127.0.0.1:6379> keys *
+(empty list or set)
+127.0.0.1:6379> set name name
+OK
+127.0.0.1:6379> setex name 10 name
+OK
+127.0.0.1:6379> ttl name
+(integer) 7
+127.0.0.1:6379> ttl name
+(integer) 4
+127.0.0.1:6379> ttl name
+(integer) 1
+127.0.0.1:6379> ttl name
+(integer) -2
+127.0.0.1:6379> lpush friends dimpy
+(integer) 1
+127.0.0.1:6379> lrange friends 0 -1
+1) "dimpy"
+127.0.0.1:6379> rpush friends bhavya
+(integer) 2
+127.0.0.1:6379> lrange friends 0 -1
+1) "dimpy"
+2) "bhavya"
+127.0.0.1:6379> lpush friends gauri
+(integer) 3
+127.0.0.1:6379> lrange friends 0 -1
+1) "gauri"
+2) "dimpy"
+3) "bhavya"
+127.0.0.1:6379> keys *
+1) "friends"
+127.0.0.1:6379> lpop friends
+"gauri"
+127.0.0.1:6379> lrange friends 0 -1
+1) "dimpy"
+2) "bhavya"
+127.0.0.1:6379> sadd hobbies "reading"
+(integer) 1
+127.0.0.1:6379> sadd hobbies painting
+(integer) 1
+127.0.0.1:6379> sadd hobbies painting
+(integer) 0
+127.0.0.1:6379> smembers hobbies
+1) "reading"
+2) "painting"
+127.0.0.1:6379> hset person name heena
+(integer) 1
+127.0.0.1:6379> hget person name
+"heena"
+127.0.0.1:6379> hgetall person
+1) "name"
+2) "heena"
+127.0.0.1:6379> hset person age 20
+(integer) 1
+127.0.0.1:6379> hgetall person
+1) "name"
+2) "heena"
+3) "age"
+4) "20"
+127.0.0.1:6379> hdel person age
+(integer) 1
+127.0.0.1:6379> hgetall person
+1) "name"
+2) "heena"
+127.0.0.1:6379> hexists person name
+(integer) 1
+127.0.0.1:6379> hexists person age
+(integer) 0
+127.0.0.1:6379> lrange friends 1 1
+1) "bhavya"
+127.0.0.1:6379>

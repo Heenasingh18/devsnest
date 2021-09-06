@@ -1,0 +1,91 @@
+//SUBSCRIBER-1 Window
+
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> SUBSCRIBE devsnest
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "devsnest"
+3) (integer) 1
+1) "message"
+2) "devsnest"
+3) "Hello"
+1) "message"
+2) "devsnest"
+3) "Subscribed"
+^C
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> PSUBSCRIBE d*
+Reading messages... (press Ctrl-C to quit)
+1) "psubscribe"
+2) "d*"
+3) (integer) 1
+1) "pmessage"
+2) "d*"
+3) "devsnest"
+4) "SubscribedAll"
+1) "pmessage"
+2) "d*"
+3) "devs"
+4) "SubscribedAll"
+^C
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> UNSUBSCRIBE devsnest
+1) "unsubscribe"
+2) "devsnest"
+3) (integer) 0
+127.0.0.1:6379>
+
+
+
+//SUBSCRIBER-2 Window
+
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> SUBSCRIBE devsnest
+Reading messages... (press Ctrl-C to quit)
+1) "subscribe"
+2) "devsnest"
+3) (integer) 1
+1) "message"
+2) "devsnest"
+3) "Hello"
+1) "message"
+2) "devsnest"
+3) "Subscribed"
+^C
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> PSUBSCRIBE d*
+Reading messages... (press Ctrl-C to quit)
+1) "psubscribe"
+2) "d*"
+3) (integer) 1
+1) "pmessage"
+2) "d*"
+3) "devsnest"
+4) "SubscribedAll"
+1) "pmessage"
+2) "d*"
+3) "devs"
+4) "SubscribedAll"
+^C
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> PUNSUBSCRIBE d*
+1) "punsubscribe"
+2) "d*"
+3) (integer) 0
+127.0.0.1:6379>
+
+
+PUBLISHER Window
+
+C:\Users\User\Desktop\backend>redis-cli
+127.0.0.1:6379> PUBLISH devsnest Hello
+(integer) 2
+127.0.0.1:6379> Publish devsnest Subscribed
+(integer) 2
+127.0.0.1:6379> PUBLISH devsnest SubscribedAll
+(integer) 2
+127.0.0.1:6379> PUBLISH devs SubscribedAll
+(integer) 2
+127.0.0.1:6379> PUBLISH devs Unsubscribed
+(integer) 0
+127.0.0.1:6379>
